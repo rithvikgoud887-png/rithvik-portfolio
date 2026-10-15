@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R.E. Rithvik | Computer Science & AIML Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of R.E. Rithvik - Computer Science & Engineering (AIML) Student, Python Developer, and Web Developer with hands-on projects in Phishing Detection, LMS, and Machine Learning.">
+  <meta name="keywords" content="R.E. Rithvik, Rithvik, AIML, Mohan Babu University, Python Developer, Web Developer, Phishing Detection, Portfolio">
+  <meta name="author" content="R.E. Rithvik">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="R.E. Rithvik | CSE (AIML) Student & Developer">
+  <meta property="og:description" content="Explore projects, skills, education, and interactive live demos built by R.E. Rithvik.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Interactive Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="logo-badge">RR</span>
+        <span class="logo-text">Rithvik<span class="dot">.</span><span class="logo-sub">dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#live-demos" class="nav-link highlight">Live Demos</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Switch Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <button class="btn btn-outline btn-sm resume-btn" id="open-resume-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Resume
+        </button>
+
+        <button class="hamburger-btn" id="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#live-demos" class="mobile-nav-link highlight">Live Demos</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <button class="btn btn-primary" id="mobile-resume-btn">View Full Resume</button>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span>Available for Internships & Projects</span>
+            <span class="pill-badge">B.Tech 2027</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hello, I'm</span>
+            <span class="gradient-text hero-name">R.E. Rithvik</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-prefix">Specializing in</span>
+            <span class="typing-text" id="typewriter"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-summary">
+            Computer Science & Engineering (AIML) student at <strong>Mohan Babu University</strong> with hands-on experience developing web applications, intelligent rule-based systems, and clean academic architectures. Passionate about practical problem solving, Python programming, and modern web development.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#live-demos" class="btn btn-primary btn-lg pulse-glow" id="hero-btn-demo">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Try Live Demos
+            </a>
+            <a href="#projects" class="btn btn-outline btn-lg" id="hero-btn-projects">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-ghost btn-lg" id="hero-btn-contact">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Get In Touch
+            </a>
+          </div>
+
+          <div class="hero-quick-meta">
+            <div class="meta-item copyable" data-copy="rithvikgoud887@gmail.com" title="Click to copy email">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>rithvikgoud887@gmail.com</span>
+              <span class="copy-hint">Copy</span>
+            </div>
+            <div class="meta-item copyable" data-copy="+917981909891" title="Click to copy phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 7981909891</span>
+              <span class="copy-hint">Copy</span>
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Tirupati, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Interactive Card -->
+        <div class="hero-visual">
+          <div class="tech-card-glass">
+            <div class="tech-card-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="window-title">rithvik_engineer_profile.json</span>
+              <span class="badge-status">Active</span>
+            </div>
+
+            <div class="code-preview">
+              <pre><code><span class="c-keyword">const</span> <span class="c-variable">engineer</span> = {
+  <span class="c-key">name</span>: <span class="c-string">"R.E. Rithvik"</span>,
+  <span class="c-key">institution</span>: <span class="c-string">"Mohan Babu University"</span>,
+  <span class="c-key">degree</span>: <span class="c-string">"B.Tech CSE (AIML)"</span>,
+  <span class="c-key">graduation</span>: <span class="c-number">2027</span>,
+  <span class="c-key">coreStack</span>: [
+    <span class="c-string">"Python"</span>, <span class="c-string">"JavaScript"</span>, <span class="c-string">"SQL"</span>,
+    <span class="c-string">"Responsive Web"</span>, <span class="c-string">"AIML Basics"</span>
+  ],
+  <span class="c-key">currentStatus</span>: <span class="c-string">"Ready to create impact"</span>,
+  <span class="c-key">hackathon</span>: <span class="c-string">"Synapse 2K25 Participant"</span>
+};</code></pre>
+            </div>
+
+            <!-- Floating Skill Orbits -->
+            <div class="card-pills-row">
+              <span class="orbit-pill pill-python">
+                <span class="pill-icon">🐍</span> Python
+              </span>
+              <span class="orbit-pill pill-js">
+                <span class="pill-icon">⚡</span> JavaScript
+              </span>
+              <span class="orbit-pill pill-sql">
+                <span class="pill-icon">🗄️</span> SQL
+              </span>
+              <span class="orbit-pill pill-ai">
+                <span class="pill-icon">🤖</span> AI & ML
+              </span>
+            </div>
+
+            <div class="profile-card-footer">
+              <div class="verified-tag">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span>Verified Academic & Project Credentials</span>
+              </div>
+              <button class="interactive-ping-btn" id="ping-developer" title="Send a simulated hello">
+                👋 Say Hi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="metrics-bar">
+        <div class="container metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number" data-target="2027">2027</div>
+            <div class="metric-label">Graduating Batch (B.Tech)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">7.0 <span class="metric-unit">CGPA</span></div>
+            <div class="metric-label">B.Tech Academic Score</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">95% &amp; 88%</div>
+            <div class="metric-label">Secondary &amp; Intermediate</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">Synapse 2K25</div>
+            <div class="metric-label">Hackathon Competitor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging practical software engineering with artificial intelligence fundamentals.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel main-about-card">
+            <div class="about-avatar-wrapper">
+              <div class="custom-avatar-graphic">
+                <div class="avatar-ring"></div>
+                <div class="avatar-core">
+                  <span class="avatar-initials">RR</span>
+                </div>
+              </div>
+              <div class="avatar-meta">
+                <h3>R.E. Rithvik</h3>
+                <p>Computer Science & Engineering (AIML) Undergrad</p>
+                <div class="badge-row">
+                  <span class="chip">Mohan Babu University</span>
+                  <span class="chip">Tirupati, AP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-bio-text">
+              <p>
+                I am a third-year undergraduate student specializing in <strong>Artificial Intelligence & Machine Learning</strong> at Mohan Babu University, Tirupati. My core drive is turning theoretical computing concepts into practical, reliable, and user-centric software solutions.
+              </p>
+              <p>
+                I have developed applications ranging from cybersecurity heuristic tools like the <strong>Phishing Website Detector</strong> to role-tailored academic portals like the <strong>Learning Management System (LMS)</strong>. Through hands-on development, I have honed clean code architecture, responsive design, and intuitive user experiences.
+              </p>
+            </div>
+
+            <div class="interests-container">
+              <span class="interests-label">Areas of Interest:</span>
+              <div class="interests-pills">
+                <span class="interest-pill">🐍 Python Development</span>
+                <span class="interest-pill">📊 Data &amp; SQL</span>
+                <span class="interest-pill">🌐 Web Development</span>
+                <span class="interest-pill">🤖 Artificial Intelligence &amp; ML</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-features-col">
+            <div class="feature-card glass-panel">
+              <div class="feature-icon icon-cyan">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="feature-content">
+                <h4>Hands-On Application Building</h4>
+                <p>Experienced in architecting web-based tools with clean HTML, CSS, JavaScript, and client-side validation logic.</p>
+              </div>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon icon-purple">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              </div>
+              <div class="feature-content">
+                <h4>Logical Problem Solving</h4>
+                <p>Equipped with analytical reasoning to dissect complex algorithms, debug system issues, and optimize workflows.</p>
+              </div>
+            </div>
+
+            <div class="feature-card glass-panel">
+              <div class="feature-icon icon-emerald">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div class="feature-content">
+                <h4>Teamwork &amp; Adaptability</h4>
+                <p>Demonstrated in hackathon environments like Synapse 2K25, collaborating under deadlines with enthusiasm to master new tech.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical Toolkit</h2>
+          <p class="section-subtitle">Categorized skills backed by coursework, personal projects, and continuous learning.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-tabs" id="skills-filter">
+          <button class="filter-tab active" data-filter="all">All Skills</button>
+          <button class="filter-tab" data-filter="languages">Languages</button>
+          <button class="filter-tab" data-filter="web">Web Development</button>
+          <button class="filter-tab" data-filter="database">Database &amp; SQL</button>
+          <button class="filter-tab" data-filter="aiml">AI &amp; ML</button>
+          <button class="filter-tab" data-filter="tools">Developer Tools</button>
+          <button class="filter-tab" data-filter="soft">Soft Skills</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-container">
+          <!-- Python -->
+          <div class="skill-card glass-panel" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🐍</div>
+              <span class="skill-level-badge level-advanced">Core Language</span>
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <p class="skill-desc">Object-oriented programming, data manipulation, algorithm implementations, and scripting.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card glass-panel" data-category="languages">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">☕</div>
+              <span class="skill-level-badge level-intermediate">Academic Core</span>
+            </div>
+            <h4 class="skill-name">Java</h4>
+            <p class="skill-desc">Object-oriented paradigms, class hierarchies, interfaces, data structures, and foundational algorithms.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card glass-panel" data-category="languages web">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">⚡</div>
+              <span class="skill-level-badge level-advanced">Interactive Core</span>
+            </div>
+            <h4 class="skill-name">JavaScript (ES6+)</h4>
+            <p class="skill-desc">DOM manipulation, event-driven architectures, client-side validation, regex pattern matching.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- HTML5 & Semantic Web -->
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🌐</div>
+              <span class="skill-level-badge level-advanced">Structure</span>
+            </div>
+            <h4 class="skill-name">HTML5</h4>
+            <p class="skill-desc">Semantic document markup, accessibility standards, form inputs, meta optimization, and layout structure.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- CSS3 & Responsive Design -->
+          <div class="skill-card glass-panel" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🎨</div>
+              <span class="skill-level-badge level-advanced">Styling &amp; UX</span>
+            </div>
+            <h4 class="skill-name">CSS3 &amp; Responsive Web</h4>
+            <p class="skill-desc">Flexbox, CSS Grid, media queries, CSS variables, glassmorphism, micro-animations, and fluid UI.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- SQL & Database -->
+          <div class="skill-card glass-panel" data-category="database">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🗄️</div>
+              <span class="skill-level-badge level-intermediate">Data Storage</span>
+            </div>
+            <h4 class="skill-name">SQL &amp; MySQL Basics</h4>
+            <p class="skill-desc">Relational querying, SELECT filters, JOIN operations, data integrity, table schema creation.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 78%;"></div>
+            </div>
+          </div>
+
+          <!-- Machine Learning Basics -->
+          <div class="skill-card glass-panel" data-category="aiml">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🤖</div>
+              <span class="skill-level-badge level-foundational">Specialization</span>
+            </div>
+            <h4 class="skill-name">Machine Learning Basics</h4>
+            <p class="skill-desc">Supervised/unsupervised learning fundamentals, classification concepts, model evaluation metrics.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 72%;"></div>
+            </div>
+          </div>
+
+          <!-- NLP Basics -->
+          <div class="skill-card glass-panel" data-category="aiml">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">💬</div>
+              <span class="skill-level-badge level-foundational">Language AI</span>
+            </div>
+            <h4 class="skill-name">NLP Basics</h4>
+            <p class="skill-desc">Text preprocessing, tokenization, bag of words, sentiment analysis principles, semantic patterns.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 70%;"></div>
+            </div>
+          </div>
+
+          <!-- Generative AI Basics -->
+          <div class="skill-card glass-panel" data-category="aiml">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">✨</div>
+              <span class="skill-level-badge level-foundational">Modern AI</span>
+            </div>
+            <h4 class="skill-name">Generative AI Basics</h4>
+            <p class="skill-desc">LLM workflows, prompt engineering, AI developer tooling, intelligent assistance integration.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 74%;"></div>
+            </div>
+          </div>
+
+          <!-- Developer Tools: Git & GitHub -->
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🐙</div>
+              <span class="skill-level-badge level-intermediate">Version Control</span>
+            </div>
+            <h4 class="skill-name">Git &amp; GitHub</h4>
+            <p class="skill-desc">Branch management, commits, pull requests, repository maintenance, collaborative workflows.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 80%;"></div>
+            </div>
+          </div>
+
+          <!-- VS Code & IDE Tools -->
+          <div class="skill-card glass-panel" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🛠️</div>
+              <span class="skill-level-badge level-advanced">Environment</span>
+            </div>
+            <h4 class="skill-name">VS Code &amp; DevTools</h4>
+            <p class="skill-desc">Debugging, terminal scripting, extension ecosystem, Chrome DevTools network & DOM analysis.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Soft Skills: Problem Solving -->
+          <div class="skill-card glass-panel" data-category="soft">
+            <div class="skill-card-top">
+              <div class="skill-icon-box">🧠</div>
+              <span class="skill-level-badge level-advanced">Mindset</span>
+            </div>
+            <h4 class="skill-name">Problem Solving &amp; Logic</h4>
+            <p class="skill-desc">Deconstructing requirements into modular components, edge-case testing, and systematic debugging.</p>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" style="--skill-pct: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Engineered Projects</h2>
+          <p class="section-subtitle">Real-world applications built with clean code and thoughtful human interfaces.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Phishing Website Detector -->
+          <article class="project-card glass-panel">
+            <div class="project-card-banner banner-phish">
+              <div class="banner-badge">
+                <span class="pulse-dot"></span> Cybersecurity &amp; Web
+              </div>
+              <div class="banner-icon-large">🛡️</div>
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Security Heuristics</span>
+              </div>
+
+              <h3 class="project-title">Phishing Website Detector</h3>
+              <p class="project-desc">
+                A web-based cybersecurity application designed to safeguard users from malicious phishing sites. It parses incoming URLs and runs a multi-point rule-based analysis against fraudulent patterns, suspicious TLDs, and domain impersonations.
+              </p>
+
+              <div class="project-features-list">
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Rule-based URL analysis checking abnormal structures, IP hostnames & misleading domains.</span>
+                </div>
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Responsive, beginner-friendly UI with instantaneous visual threat scores.</span>
+                </div>
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Client-side input sanitization, error boundaries, and dynamic real-time reporting.</span>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="#demo-phish" class="btn btn-primary btn-sm scroll-to-demo" data-target="phish">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Test Live Detector
+                </a>
+                <button class="btn btn-outline btn-sm view-spec-btn" data-modal="phish-spec">
+                  Architecture Info
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Learning Management System (LMS) -->
+          <article class="project-card glass-panel">
+            <div class="project-card-banner banner-lms">
+              <div class="banner-badge">
+                <span class="pulse-dot green"></span> EdTech Architecture
+              </div>
+              <div class="banner-icon-large">🎓</div>
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Role-Based UX</span>
+              </div>
+
+              <h3 class="project-title">Learning Management System (LMS)</h3>
+              <p class="project-desc">
+                An interactive web platform built to organize academic activities via dedicated student and teacher portals. It simplifies course interactions, assignment tracking, and academic record viewing with role-specific views.
+              </p>
+
+              <div class="project-features-list">
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Dedicated role-based dashboards with context-sensitive navigation for teachers & students.</span>
+                </div>
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Clean academic aesthetic designed for low cognitive load and clear course tracking.</span>
+                </div>
+                <div class="pf-item">
+                  <span class="pf-check">✔</span>
+                  <span>Dynamic DOM interaction for assignment submissions, attendance logs, and notifications.</span>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="#demo-lms" class="btn btn-primary btn-sm scroll-to-demo" data-target="lms">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  Launch Interactive Demo
+                </a>
+                <button class="btn btn-outline btn-sm view-spec-btn" data-modal="lms-spec">
+                  Architecture Info
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE DEMOS SECTION (The WOW Feature) -->
+    <section class="section live-demos-section" id="live-demos">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag highlight-tag">Hands-on Experience</span>
+          <h2 class="section-title">Interactive Project Lab</h2>
+          <p class="section-subtitle">Test Rithvik's applications live right here inside the browser without leaving the page.</p>
+        </div>
+
+        <!-- Sandbox Tabs -->
+        <div class="demo-tabs-bar">
+          <button class="demo-tab-btn active" id="tab-btn-phish" data-demo="phish">
+            <span class="tab-icon">🛡️</span> Phishing Detector Demo
+          </button>
+          <button class="demo-tab-btn" id="tab-btn-lms" data-demo="lms">
+            <span class="tab-icon">🎓</span> LMS Academic Portal Demo
+          </button>
+        </div>
+
+        <!-- DEMO 1: Phishing Website Detector Sandbox -->
+        <div class="demo-viewport active" id="demo-phish">
+          <div class="demo-window glass-panel">
+            <div class="demo-window-bar">
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-address-bar">
+                <span class="secure-icon">🔒</span>
+                <span class="address-text">https://rithvik-phishing-detector.local/scan</span>
+              </div>
+              <span class="status-pill status-ready">Detector Engine: Ready</span>
+            </div>
+
+            <div class="demo-app-content">
+              <div class="phish-scanner-header">
+                <h3>Phishing Threat URL Analyzer</h3>
+                <p>Enter any URL or select a test case below to inspect heuristic security indicators in real time.</p>
+              </div>
+
+              <!-- Quick Presets -->
+              <div class="preset-buttons-row">
+                <span class="preset-label">Quick Test Cases:</span>
+                <button class="preset-btn" data-url="https://github.com/rithvikgoud887-png">✅ Legitimate (GitHub)</button>
+                <button class="preset-btn" data-url="http://secure-login.paypal-verify-account.tk/login.php">⚠️ Deceptive PayPal Phish</button>
+                <button class="preset-btn" data-url="http://192.168.1.100/bank-signin/auth">🚨 Suspicious Raw IP Address</button>
+                <button class="preset-btn" data-url="http://claim-free-rewards-instant.xyz/win">❌ Suspicious TLD (.xyz)</button>
+              </div>
+
+              <!-- Input Form -->
+              <form class="scanner-input-group" id="phish-form" onsubmit="return false;">
+                <div class="input-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <input type="text" id="phish-url-input" placeholder="e.g. https://example.com or paste any suspicious link..." value="https://github.com/rithvikgoud887-png" autocomplete="off">
+                </div>
+                <button type="button" class="btn btn-primary" id="btn-scan-url">
+                  <span class="btn-text">Analyze URL</span>
+                  <span class="spinner" id="scan-spinner"></span>
+                </button>
+              </form>
+
+              <!-- Results Area -->
+              <div class="scanner-results-box" id="scan-results" style="display: block;">
+                <div class="results-top-bar">
+                  <div class="threat-badge-container">
+                    <span class="threat-badge badge-safe" id="threat-badge">Safe / Legitimate</span>
+                    <span class="scanned-url-display" id="scanned-url-txt">https://github.com/rithvikgoud887-png</span>
+                  </div>
+                  <div class="risk-gauge-wrapper">
+                    <div class="gauge-label">Calculated Risk Score:</div>
+                    <div class="gauge-meter-wrapper">
+                      <div class="gauge-bar-fill" id="gauge-bar" style="width: 5%;"></div>
+                    </div>
+                    <span class="risk-score-value" id="risk-score-val">5 / 100</span>
+                  </div>
+                </div>
+
+                <!-- Diagnostics Checklist -->
+                <div class="diagnostics-grid" id="diagnostics-list">
+                  <!-- Injected via JS -->
+                </div>
+
+                <div class="recommendation-notice" id="recommendation-box">
+                  <strong>Recommendation:</strong> <span id="rec-text">The URL uses secure HTTPS with a trusted domain and standard structure. Proceed safely.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO 2: LMS Academic Portal Sandbox -->
+        <div class="demo-viewport" id="demo-lms">
+          <div class="demo-window glass-panel">
+            <div class="demo-window-bar">
+              <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="window-address-bar">
+                <span class="secure-icon">🎓</span>
+                <span class="address-text">https://mbu-academic-lms.local/portal</span>
+              </div>
+              <div class="role-switcher">
+                <button class="role-btn active" id="role-student-btn" data-role="student">👨‍🎓 Student View</button>
+                <button class="role-btn" id="role-teacher-btn" data-role="teacher">👩‍🏫 Teacher View</button>
+              </div>
+            </div>
+
+            <div class="demo-app-content">
+              <!-- Student View Container -->
+              <div class="lms-view" id="lms-student-view">
+                <div class="lms-header-strip">
+                  <div class="lms-user-info">
+                    <div class="lms-avatar">RR</div>
+                    <div>
+                      <h4 class="lms-name">R.E. Rithvik</h4>
+                      <p class="lms-meta">B.Tech CSE (AIML) • Mohan Babu University • Roll: 23MBU104</p>
+                    </div>
+                  </div>
+                  <div class="lms-stat-pill">
+                    <span class="pill-title">Current CGPA</span>
+                    <span class="pill-value">7.0 / 10.0</span>
+                  </div>
+                </div>
+
+                <!-- Student Dashboard Cards -->
+                <div class="lms-courses-grid">
+                  <div class="lms-course-card">
+                    <div class="course-header">
+                      <span class="course-code">CS-AI301</span>
+                      <span class="course-status status-active">In Progress</span>
+                    </div>
+                    <h5>Artificial Intelligence &amp; Machine Learning</h5>
+                    <p class="faculty-name">Prof. AIML Dept • MBU</p>
+                    <div class="progress-info">
+                      <span>Course Progress</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                      <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="course-action-row">
+                      <span class="attendance-tag">Attendance: 92%</span>
+                      <button class="btn btn-ghost btn-xs submit-trigger-btn" data-course="AI & ML">Submit Assignment</button>
+                    </div>
+                  </div>
+
+                  <div class="lms-course-card">
+                    <div class="course-header">
+                      <span class="course-code">CS-WEB204</span>
+                      <span class="course-status status-active">In Progress</span>
+                    </div>
+                    <h5>Web Technologies &amp; JavaScript Applications</h5>
+                    <p class="faculty-name">Prof. Web Eng • MBU</p>
+                    <div class="progress-info">
+                      <span>Course Progress</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                      <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                    <div class="course-action-row">
+                      <span class="attendance-tag">Attendance: 95%</span>
+                      <button class="btn btn-ghost btn-xs submit-trigger-btn" data-course="Web Technologies">Submit Assignment</button>
+                    </div>
+                  </div>
+
+                  <div class="lms-course-card">
+                    <div class="course-header">
+                      <span class="course-code">CS-DB202</span>
+                      <span class="course-status status-active">In Progress</span>
+                    </div>
+                    <h5>Relational Database &amp; SQL Basics</h5>
+                    <p class="faculty-name">Prof. Data Systems • MBU</p>
+                    <div class="progress-info">
+                      <span>Course Progress</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="progress-bar-wrap">
+                      <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <div class="course-action-row">
+                      <span class="attendance-tag">Attendance: 89%</span>
+                      <button class="btn btn-ghost btn-xs submit-trigger-btn" data-course="SQL & Databases">Submit Assignment</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Assignment Simulation Box -->
+                <div class="interactive-action-box glass-panel">
+                  <h4>Interactive Assignment Submission Simulator</h4>
+                  <p>Test the client-side validation and dynamic status feedback mechanism built into the LMS:</p>
+                  
+                  <div class="sub-form-row">
+                    <select id="sub-course-select" class="lms-input">
+                      <option value="Artificial Intelligence & ML">CS-AI301: Artificial Intelligence & ML</option>
+                      <option value="Web Technologies">CS-WEB204: Web Technologies & JavaScript</option>
+                      <option value="Relational Database & SQL">CS-DB202: Relational Database & SQL</option>
+                    </select>
+
+                    <input type="text" id="sub-title-input" class="lms-input" placeholder="Assignment Title (e.g. Heuristic Model Analysis)">
+                    
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-submit-assignment">
+                      Submit Work
+                    </button>
+                  </div>
+                  
+                  <div class="submission-log" id="submission-log">
+                    <span class="empty-log-txt">No assignment submitted yet in this session. Try submitting one above!</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Teacher View Container -->
+              <div class="lms-view" id="lms-teacher-view" style="display: none;">
+                <div class="lms-header-strip teacher-strip">
+                  <div class="lms-user-info">
+                    <div class="lms-avatar teacher-avatar">FA</div>
+                    <div>
+                      <h4 class="lms-name">Faculty Portal</h4>
+                      <p class="lms-meta">Department of Computer Science &amp; AIML • Course Coordinator</p>
+                    </div>
+                  </div>
+                  <div class="lms-stat-pill">
+                    <span class="pill-title">Students Enrolled</span>
+                    <span class="pill-value">64 Active</span>
+                  </div>
+                </div>
+
+                <div class="teacher-actions-grid">
+                  <div class="teacher-panel glass-panel">
+                    <h5>Student Grade &amp; Evaluation Ledger</h5>
+                    <div class="table-responsive">
+                      <table class="lms-table">
+                        <thead>
+                          <tr>
+                            <th>Roll #</th>
+                            <th>Student Name</th>
+                            <th>Course</th>
+                            <th>Status</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody id="teacher-roster-body">
+                          <tr>
+                            <td>23MBU104</td>
+                            <td><strong>R.E. Rithvik</strong></td>
+                            <td>CS-AI301</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                            <td><span class="grade-pill">9.2 / 10</span></td>
+                            <td><button class="btn btn-outline btn-xs update-grade-btn" data-name="R.E. Rithvik">Review</button></td>
+                          </tr>
+                          <tr>
+                            <td>23MBU105</td>
+                            <td>A. Sharma</td>
+                            <td>CS-AI301</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                            <td><span class="grade-pill">8.5 / 10</span></td>
+                            <td><button class="btn btn-outline btn-xs update-grade-btn" data-name="A. Sharma">Review</button></td>
+                          </tr>
+                          <tr>
+                            <td>23MBU108</td>
+                            <td>V. Kumar</td>
+                            <td>CS-WEB204</td>
+                            <td><span class="badge badge-warning">Pending Review</span></td>
+                            <td><span class="grade-pill">--</span></td>
+                            <td><button class="btn btn-outline btn-xs update-grade-btn" data-name="V. Kumar">Grade</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="teacher-panel glass-panel">
+                    <h5>Post Course Announcement</h5>
+                    <form id="announcement-form" onsubmit="return false;">
+                      <input type="text" id="announce-title" class="lms-input mb-2" placeholder="Announcement Title (e.g. Lab Schedule)">
+                      <textarea id="announce-body" class="lms-input mb-2" rows="3" placeholder="Details for students..."></textarea>
+                      <button type="button" class="btn btn-primary btn-sm" id="btn-post-announcement">Broadcast to Students</button>
+                    </form>
+                    <div class="announcement-feed" id="announcement-feed">
+                      <div class="notice-item">
+                        <span class="notice-date">Today</span>
+                        <strong>Upcoming Project Review:</strong> Submit Phishing Detection rule specs by Friday 5 PM.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & HACKATHONS -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Achievements &amp; Activities</span>
+          <h2 class="section-title">Certifications &amp; Hackathons</h2>
+          <p class="section-subtitle">Extracurricular problem-solving and rapid team prototyping.</p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card glass-panel">
+            <div class="cert-badge-glow">🏆</div>
+            <div class="cert-content">
+              <span class="cert-tag">Hackathon Participation</span>
+              <h3 class="cert-title">Synapse 2K25 Hackathon Participant</h3>
+              <p class="cert-issuer">Organized by <strong>Hubexus &amp; AIML Department</strong>, Mohan Babu University (MBU)</p>
+              <div class="cert-date">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>October 2025</span>
+              </div>
+              <p class="cert-desc">
+                Competed in high-intensity problem-solving sprints tackling real-world algorithmic and application challenges. Collaborated within a team under strict delivery timeframes, demonstrating agile development and rapid prototype iteration.
+              </p>
+              <div class="cert-tags-row">
+                <span class="tag-pill">Rapid Prototyping</span>
+                <span class="tag-pill">AI/ML Integration</span>
+                <span class="tag-pill">Team Collaboration</span>
+                <span class="tag-pill">Presentation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Pathway</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-subtitle">A strong academic foundation spanning computer science, mathematics, and science.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- B.Tech -->
+          <div class="timeline-card glass-panel" data-anim="slide-right">
+            <div class="timeline-marker marker-primary">
+              <span class="marker-icon">🎓</span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-period">2023 – 2027 (Currently Pursuing)</span>
+              <span class="timeline-badge badge-cgpa">CGPA: 7.0</span>
+            </div>
+            <h3 class="timeline-degree">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="timeline-major">Computer Science &amp; Engineering (Artificial Intelligence &amp; Machine Learning)</h4>
+            <p class="timeline-institution">Mohan Babu University, Tirupati, Andhra Pradesh</p>
+            <p class="timeline-details">
+              Focusing on foundational computing, data structures & algorithms, web architecture, machine learning basics, natural language processing, and practical project-based software design.
+            </p>
+            <div class="timeline-tags">
+              <span class="chip">Python</span>
+              <span class="chip">Java OOP</span>
+              <span class="chip">Web Systems</span>
+              <span class="chip">SQL Databases</span>
+              <span class="chip">AIML Fundamentals</span>
+            </div>
+          </div>
+
+          <!-- Intermediate -->
+          <div class="timeline-card glass-panel" data-anim="slide-left">
+            <div class="timeline-marker marker-secondary">
+              <span class="marker-icon">🏛️</span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-period">Class XII (Intermediate)</span>
+              <span class="timeline-badge badge-score">88% Marks</span>
+            </div>
+            <h3 class="timeline-degree">Board of Intermediate Education, Andhra Pradesh</h3>
+            <p class="timeline-institution">Narayana Junior College, Nannur, Andhra Pradesh</p>
+            <p class="timeline-details">
+              Rigorous grounding in Higher Secondary Mathematics, Physics, and Chemistry, cementing strong analytical and logical reasoning skills.
+            </p>
+          </div>
+
+          <!-- Secondary School -->
+          <div class="timeline-card glass-panel" data-anim="slide-right">
+            <div class="timeline-marker marker-tertiary">
+              <span class="marker-icon">🏫</span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-period">Class X (Secondary)</span>
+              <span class="timeline-badge badge-high-score">95% Marks</span>
+            </div>
+            <h3 class="timeline-degree">Board of Secondary Education, Andhra Pradesh</h3>
+            <p class="timeline-institution">Narayana English Medium School, Dhone, Andhra Pradesh</p>
+            <p class="timeline-details">
+              Graduated with top academic distinction (95%), establishing disciplined study habits and a passion for science and technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in hiring, collaborating on a project, or discussing software &amp; AI?</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            <div class="contact-card glass-panel copyable" data-copy="rithvikgoud887@gmail.com">
+              <div class="contact-icon icon-cyan">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email Address</span>
+                <span class="contact-val">rithvikgoud887@gmail.com</span>
+                <span class="click-hint">Click to copy or compose</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel copyable" data-copy="+917981909891">
+              <div class="contact-icon icon-purple">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Phone &amp; WhatsApp</span>
+                <span class="contact-val">+91 7981909891</span>
+                <span class="click-hint">Click to copy</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon icon-emerald">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Current Location</span>
+                <span class="contact-val">Tirupati, Andhra Pradesh, India</span>
+                <span class="click-hint">Open for relocation &amp; remote roles</span>
+              </div>
+            </div>
+
+            <!-- Resume Download Action Box -->
+            <div class="resume-cta-box glass-panel">
+              <h4>Want a physical or PDF copy?</h4>
+              <p>View the cleanly formatted printable resume ready for offline review.</p>
+              <button class="btn btn-outline btn-sm full-width" id="contact-view-resume-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                View &amp; Print Resume
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card glass-panel">
+              <h3>Send a Direct Message</h3>
+              <p>Fill out the form below. It automatically generates a direct correspondence thread.</p>
+
+              <form id="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="contact-name" class="form-control" placeholder="e.g. Satya Nadella" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email">Your Email <span class="required">*</span></label>
+                    <input type="email" id="contact-email" class="form-control" placeholder="e.g. recruiter@company.com" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject</label>
+                  <input type="text" id="contact-subject" class="form-control" placeholder="Internship Opportunity / Project Collaboration">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message <span class="required">*</span></label>
+                  <textarea id="contact-message" class="form-control" rows="4" placeholder="Hello Rithvik, I came across your portfolio and would like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg full-width" id="btn-submit-contact">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-badge">RR</span>
+          <span>R.E. Rithvik</span>
+        </a>
+        <p class="footer-tagline">Computer Science &amp; Engineering (AIML) Student • Mohan Babu University</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#live-demos">Live Demos</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-right">
+        <p>&copy; <span id="current-year">2026</span> R.E. Rithvik. All rights reserved.</p>
+        <p class="sub-credit">Designed with clean HTML5, CSS3, &amp; Vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: RESUME VIEWER (Interactive & Printable) -->
+  <div class="modal-overlay" id="resume-modal" aria-hidden="true">
+    <div class="modal-dialog resume-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">📄</span>
+          <h3>Curriculum Vitae — R.E. Rithvik</h3>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary btn-sm" id="btn-print-resume">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="btn-close-resume" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="modal-body printable-resume-body" id="printable-resume">
+        <!-- Exact Resume Replica Styled Cleanly for Screen & Print -->
+        <div class="paper-resume">
+          <header class="resume-sheet-header">
+            <h1 class="resume-sheet-name">R.E.Rithvik</h1>
+            <p class="resume-sheet-title">Computer Science &amp; Engineering (AIML) Student | Python | SQL | Web Development</p>
+            <p class="resume-sheet-contact">
+              <span>+91 7981909891</span> | 
+              <span>rithvikgoud887@gmail.com</span> | 
+              <span>Tirupati, India</span>
+            </p>
+          </header>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">PROFESSIONAL SUMMARY</h2>
+            <p class="resume-text">
+              Computer Science and Engineering (AIML) student with hands-on experience building web-based applications and academic projects. Strong foundation in Python, SQL, HTML, CSS and JavaScript, with basic knowledge of machine learning, NLP and Generative AI. Interested in practical problem solving, software development and learning through project-based work.
+            </p>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">TECHNICAL SKILLS</h2>
+            <ul class="resume-skills-list">
+              <li><strong>Languages:</strong> Python, Java, JavaScript</li>
+              <li><strong>Web:</strong> HTML, CSS, JavaScript, Responsive Web Design</li>
+              <li><strong>Database:</strong> SQL, MySQL Basics</li>
+              <li><strong>AI &amp; ML:</strong> Machine Learning Basics, NLP Basics, Generative AI Basics</li>
+              <li><strong>Developer Tools:</strong> Git, GitHub, VS Code</li>
+            </ul>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">PROJECTS</h2>
+            
+            <div class="resume-project-item">
+              <div class="resume-proj-header">
+                <span class="proj-name">Phishing Website Detector</span>
+                <span class="proj-tech">HTML, CSS, JavaScript</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Developed a web-based phishing detection application that accepts a website URL and analyzes it for common indicators associated with suspicious or fraudulent websites.</li>
+                <li>Implemented rule-based URL analysis using JavaScript to examine characteristics such as unusual URL structure, suspicious patterns and potentially misleading domains.</li>
+                <li>Designed a simple and responsive user interface that provides an easy-to-understand detection result, making the application accessible to users without technical knowledge.</li>
+                <li>Added client-side input validation and dynamic result handling to improve usability and provide immediate feedback after URL analysis.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project-item">
+              <div class="resume-proj-header">
+                <span class="proj-name">Learning Management System (LMS)</span>
+                <span class="proj-tech">HTML, CSS, JavaScript</span>
+              </div>
+              <ul class="resume-bullet-list">
+                <li>Developed a web-based Learning Management System to organize academic activities through dedicated student and teacher interfaces.</li>
+                <li>Designed separate role-based dashboards and navigation, allowing students and teachers to access functions relevant to their respective roles.</li>
+                <li>Built responsive pages using HTML and CSS with a clean academic layout for course-related information and user interaction.</li>
+                <li>Implemented JavaScript-based client-side interactions and dynamic interface elements to make the system more interactive and user-friendly.</li>
+              </ul>
+            </div>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">CERTIFICATIONS</h2>
+            <p class="resume-cert-item">
+              <strong>Synapse 2K25 Hackathon Participant</strong> — Hubexus &amp; AIML Department, MBU (Oct 2025)
+            </p>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">EDUCATION</h2>
+            
+            <div class="resume-edu-item">
+              <div class="edu-row">
+                <span class="edu-degree"><strong>Bachelor of Technology (B.Tech)</strong></span>
+                <span class="edu-score"><strong>CGPA: 7.0</strong></span>
+              </div>
+              <div class="edu-row sub">
+                <span>Computer Science &amp; Engineering (Artificial Intelligence &amp; Machine Learning)</span>
+                <span></span>
+              </div>
+              <div class="edu-row sub">
+                <span>Mohan Babu University, Tirupati | 2023 – 2027</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="resume-edu-item">
+              <div class="edu-row">
+                <span class="edu-degree"><strong>Board of Intermediate Education, Andhra Pradesh</strong></span>
+                <span class="edu-score"><strong>88%</strong></span>
+              </div>
+              <div class="edu-row sub">
+                <span>Narayana Junior College, Nannur</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="resume-edu-item">
+              <div class="edu-row">
+                <span class="edu-degree"><strong>Board of Secondary Education, Andhra Pradesh</strong></span>
+                <span class="edu-score"><strong>95%</strong></span>
+              </div>
+              <div class="edu-row sub">
+                <span>Narayana English Medium School, Dhone</span>
+                <span></span>
+              </div>
+            </div>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">AREAS OF INTEREST</h2>
+            <p class="resume-text">
+              Python Development | Data &amp; SQL | Web Development | Artificial Intelligence &amp; Machine Learning
+            </p>
+          </section>
+
+          <hr class="resume-divider">
+
+          <section class="resume-sheet-section">
+            <h2 class="resume-section-heading">SOFT SKILLS</h2>
+            <p class="resume-text">
+              Problem Solving | Logical Thinking | Teamwork | Willingness to Learn
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURE INFO MODAL -->
+  <div class="modal-overlay" id="spec-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="spec-modal-title">Project Technical Breakdown</h3>
+        <button class="modal-close-btn" id="btn-close-spec">&times;</button>
+      </div>
+      <div class="modal-body" id="spec-modal-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
